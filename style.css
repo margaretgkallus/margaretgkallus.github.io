@@ -125,11 +125,10 @@ main { padding: 54px 0 20px; }
   margin-bottom: 12px; transition: transform .15s ease, box-shadow .2s ease, border-color .2s;
 }
 .course:hover, .course[open] { box-shadow: 0 8px 24px rgba(44,36,41,.06); border-color: var(--accent); }
-.course-head {
-  padding: 18px 20px; display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
-  cursor: pointer; list-style: none;
-}
-.course-head::-webkit-details-marker { display: none; }
+.course-sum { display: block; cursor: pointer; list-style: none; padding: 18px 20px; }
+.course-sum::-webkit-details-marker { display: none; }
+.course-sum::marker { content: ""; }
+.course-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
 .course .cname { font-family: var(--disp); font-weight: 600; font-size: 1.12rem; }
 .course .cname::after { content: " ▸"; color: var(--accent); font-size: .8rem; display: inline-block; transition: transform .2s; margin-left: 4px; }
 .course[open] .cname::after { transform: rotate(90deg); }
