@@ -108,6 +108,13 @@ main { padding: 54px 0 20px; }
 .paper details[open] summary::before { transform: rotate(90deg); }
 .paper details p { margin-top: 10px; font-size: .94rem; line-height: 1.62; }
 
+.wip { list-style: none; }
+.wip li { padding: 12px 0 12px 18px; border-bottom: 1px solid var(--line); position: relative; }
+.wip li:last-child { border-bottom: 0; }
+.wip li::before { content: ""; position: absolute; left: 0; top: 23px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.wip-title { font-family: var(--disp); font-weight: 500; font-size: 1.05rem; }
+.wip .paper-authors { display: block; margin-top: 2px; }
+
 /* ---------- TEACHING ---------- */
 .course {
   background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
