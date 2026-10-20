@@ -122,13 +122,26 @@ main { padding: 54px 0 20px; }
 /* ---------- TEACHING ---------- */
 .course {
   background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
-  padding: 18px 20px; margin-bottom: 12px; display: flex; justify-content: space-between;
-  gap: 16px; align-items: baseline; transition: transform .15s ease, box-shadow .2s ease, border-color .2s;
+  margin-bottom: 12px; transition: transform .15s ease, box-shadow .2s ease, border-color .2s;
 }
-.course:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(44,36,41,.06); border-color: var(--accent); }
+.course:hover, .course[open] { box-shadow: 0 8px 24px rgba(44,36,41,.06); border-color: var(--accent); }
+.course-head {
+  padding: 18px 20px; display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
+  cursor: pointer; list-style: none;
+}
+.course-head::-webkit-details-marker { display: none; }
 .course .cname { font-family: var(--disp); font-weight: 600; font-size: 1.12rem; }
+.course .cname::after { content: " ▸"; color: var(--accent); font-size: .8rem; display: inline-block; transition: transform .2s; margin-left: 4px; }
+.course[open] .cname::after { transform: rotate(90deg); }
 .course .cmeta { color: var(--muted); font-size: .92rem; margin-top: 3px; }
 .course .cterm { color: var(--accent); font-weight: 600; font-size: .82rem; white-space: nowrap; }
+.quotes { padding: 0 20px 18px; border-top: 1px solid var(--line); }
+.quotes-label { color: var(--muted); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; margin: 14px 0 4px; }
+.quotes blockquote {
+  margin-top: 10px; padding: 2px 0 2px 14px; border-left: 3px solid var(--accent-soft);
+  font-size: .95rem; line-height: 1.6; font-style: italic;
+}
+.page-note { color: var(--muted); font-size: .95rem; margin-bottom: 18px; }
 .muted-note { color: var(--muted); font-style: italic; margin-top: 20px; font-size: .92rem; }
 
 /* ---------- CV ---------- */
@@ -146,7 +159,7 @@ main { padding: 54px 0 20px; }
 @media (max-width: 560px) {
   .bar-inner { flex-direction: column; align-items: center; gap: 12px; }
   .nav { gap: 18px; }
-  .course { flex-direction: column; gap: 4px; }
+  .course-head { flex-direction: column; gap: 4px; }
   .paper { grid-template-columns: minmax(0, 1fr); }
   .paper-img { max-width: 360px; }
 }
