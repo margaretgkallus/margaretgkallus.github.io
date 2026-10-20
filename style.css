@@ -101,14 +101,15 @@ main { padding: 54px 0 20px; }
 .paper-link { margin-top: 8px; font-size: .9rem; }
 .paper-link a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .paper details { margin-top: 10px; }
-.paper summary {
+.wip details { margin-top: 6px; }
+.paper summary, .wip summary {
   cursor: pointer; color: var(--accent); font-weight: 600; font-size: .85rem; letter-spacing: .03em;
   list-style: none; display: inline-flex; align-items: center; gap: 6px;
 }
-.paper summary::-webkit-details-marker { display: none; }
-.paper summary::before { content: "▸"; transition: transform .2s; }
-.paper details[open] summary::before { transform: rotate(90deg); }
-.paper details p { margin-top: 10px; font-size: .94rem; line-height: 1.62; }
+.paper summary::-webkit-details-marker, .wip summary::-webkit-details-marker { display: none; }
+.paper summary::before, .wip summary::before { content: "▸"; transition: transform .2s; }
+.paper details[open] summary::before, .wip details[open] summary::before { transform: rotate(90deg); }
+.paper details p, .wip details p { margin-top: 10px; font-size: .94rem; line-height: 1.62; }
 
 .wip { list-style: none; }
 .wip li { padding: 12px 0 12px 18px; border-bottom: 1px solid var(--line); position: relative; }
@@ -116,6 +117,7 @@ main { padding: 54px 0 20px; }
 .wip li::before { content: ""; position: absolute; left: 0; top: 23px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .wip-title { font-family: var(--disp); font-weight: 500; font-size: 1.05rem; }
 .wip .paper-authors { display: block; margin-top: 2px; }
+.paper-venue { display: block; color: var(--muted); font-size: .9rem; }
 
 /* ---------- TEACHING ---------- */
 .course {
