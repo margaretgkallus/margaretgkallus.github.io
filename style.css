@@ -98,6 +98,8 @@ main { padding: 54px 0 20px; }
 .paper-title a { color: var(--ink); text-decoration: none; }
 .paper-title a:hover { color: var(--accent); }
 .paper-authors { color: var(--muted); font-size: .92rem; margin-top: 4px; }
+.paper-link { margin-top: 8px; font-size: .9rem; }
+.paper-link a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .paper details { margin-top: 10px; }
 .paper summary {
   cursor: pointer; color: var(--accent); font-weight: 600; font-size: .85rem; letter-spacing: .03em;
