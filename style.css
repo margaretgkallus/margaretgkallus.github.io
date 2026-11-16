@@ -162,3 +162,6 @@ main { padding: 54px 0 20px; }
   .paper { grid-template-columns: minmax(0, 1fr); }
   .paper-img { max-width: 360px; }
 }
+
+.lede a { color: #1a5fb4; text-decoration: underline; text-underline-offset: 3px; }
+.lede a:hover { color: #0b3d7a; }
